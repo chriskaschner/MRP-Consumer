@@ -3,16 +3,13 @@ import requests
 import json
 from flask import Flask, jsonify
 
-# url = "https://app.mrpeasy.com/rest/v1/manufacturing-orders/"
 BASE_URL = "https://app.mrpeasy.com/rest/v1/"
 
 BASE_HEADERS = {
-    "api_key": config.api_key,
-    "access_key": config.access_key}
+    "api_key": config.API_KEY,
+    "access_key": config.ACCESS_KEY}
 
 app = Flask(__name__)
-
-@app.route('/', defaults={'path': ''})
 
 @app.route('/<path:path>')
 def catch_all(path):
