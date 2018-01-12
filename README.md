@@ -13,6 +13,7 @@ A ridiculously simple Flask app to consume MRPEasy API calls and format for Goog
 - navigate to project directory
 - run `pipenv install`
     - install pipenv if you haven't already
+- run `pipenv run python MRP_Consume.py`
 - you're in business
 
 ## Bonus Hint
