@@ -1,19 +1,20 @@
-import config
+import os
 import requests
 import json
 from flask import Flask, jsonify
 
-BASE_URL = "https://app.mrpeasy.com/rest/v1/"
+BASE_URI = os.environ['BASE_URI']
 
 BASE_HEADERS = {
-    "api_key": config.API_KEY,
-    "access_key": config.ACCESS_KEY}
+    "API_KEY": os.environ['API_KEY'],
+    "ACCESS_KEY": os.environ['ACCESS_KEY']
+}
 
 app = Flask(__name__)
 
 @app.route('/<path:path>')
 def catch_all(path):
-    url_id = BASE_URL + "%s" % path
+    url_id = BASE_URI + "%s" % path
     return jsonify(MRPeasy_response(url_id))
 
 def MRPeasy_response(url):
