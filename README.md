@@ -1,5 +1,5 @@
 # MRP-Consumer
-A ridiculously simple Flask app to consume MRPEasy API calls and format for Google Sheets import. Uses `.env` for config and `pipenv`.  [Here's a great tutorial](https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv) for pipenv.
+A ridiculously simple Flask app to consume MRPEasy API calls and format for Google Sheets import. Uses `pipenv` and `.env` for config.
 
 ## Install
 - Clone repo
